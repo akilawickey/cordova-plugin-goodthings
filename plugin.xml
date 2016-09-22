@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-goodthings"
+    version="0.2.11">
+    <name>goodthings</name>
+    <description>To remind and be happy about the good things which you have done.</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,goodthings</keywords>
+    <repo></repo>
+    <issue></issue>
+
+    <js-module src="www/goodthings.js" name="goodthings">
+        <clobbers target="goodthings" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="goodthings" >
+                <param name="android-package" value="goodthings"/>
+            </feature>
+        </config-file>
+        <source-file src="src/android/goodthings.java" target-dir="src/" />
+    </platform>
+
+</plugin>
